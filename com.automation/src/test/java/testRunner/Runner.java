@@ -22,7 +22,7 @@ public class Runner {
 
 	@AfterClass
 	public static void writeExtentReport() {
-		Reporter.loadXMLConfig(new File("src/test/java/extentreporting/extent-config.xml"));
+		Reporter.loadXMLConfig(new File("src/extentreporting/extent-config.xml"));
 		Reporter.setSystemInfo("user", System.getProperty("user.name"));
 	}
 }
