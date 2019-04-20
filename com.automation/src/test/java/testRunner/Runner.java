@@ -7,13 +7,13 @@ import org.junit.runner.RunWith;
 import com.cucumber.listener.Reporter;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
-import dataProvider.DataProvider;
+
  
 @RunWith(Cucumber.class)
 @CucumberOptions(
 				features = "src/test/java/featuresfile",
 				 glue= {"stepDef"},
-				 plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
+				 plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
 				 monochrome = true
  )
 
