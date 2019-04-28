@@ -8,7 +8,8 @@ Roshan's BDD Framework
 #I have setup property file where it will be having some configuration required in framwork.
 #For continuos integration I have steup Jenkins in my local port 8080.
 #To push/pull the code to GITHUB account I have intalled and configured GIT.
-#GitHub configured with Jenkins where after each commit to repository a new Jenkins job/build will be created. Every time you publish your changes to Github, GitHub will trigger your new Jenkins job.
+#GitHub configured with Jenkins where after each commit to repository a new Jenkins job/build will be created. 
+#Every time you publish your changes to Github, GitHub will trigger your new Jenkins job.
 
 Why BDD framework?
 => BDD framework makes the stakesholder/buisness people understand the business scenarios or flows through gherkin. Gherkin is written in simple plain english having/using different keywords like "WHEN,GIVEN,THEN,AND,EXAMPLES,SCENARIO,SCENARIO OUTLINE". These keywords are pretty easy to understand what they are doing. People who do not understand the technical flow , gherkin code/cucumber will help them to understand what the automation framework is working.
