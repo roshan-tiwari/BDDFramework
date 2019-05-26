@@ -26,6 +26,44 @@ public class Utility {
 
 		StringBuffer sb = new StringBuffer();      
 	}
+	
+//	public String replaceParameterizedValuesInString(String value) {
+//
+//        Pattern pattern = Pattern.compile("\\{\\{.*?}}");
+//
+//        Matcher matcher = pattern.matcher(value);
+//
+//        StringBuffer sb = new StringBuffer();
+//
+//
+//
+//        while (matcher.find()) {
+//
+//               String keyword = matcher.group().replaceAll("\\{\\{", "").replaceAll("\\}\\}", "");
+//
+//
+//
+//               try {
+//
+//                     matcher.appendReplacement(sb, this.getPropertyKey(keyword));
+//
+//               } catch (NullPointerException var7) {
+//
+//                     throw new NullPointerException("From properties file:" + this.getPropertyKey(keyword) + "keyword: "
+//
+//                                   + keyword + " not found in the envConfig properties file.");
+//
+//               }
+//
+//        }
+//
+//
+//
+//        matcher.appendTail(sb);
+//
+//        return sb.toString();
+//
+// }
 
 
 	public static void takeScreenShot(WebDriver driver, String screenshotname){

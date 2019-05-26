@@ -1,10 +1,11 @@
 package testRunner;
 
-import java.io.File;
+import com.cucumber.listener.ExtentProperties;
+import com.cucumber.listener.Reporter;
 
+import java.io.File;
 import org.junit.AfterClass;
 import org.junit.runner.RunWith;
-import com.cucumber.listener.Reporter;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
@@ -22,7 +23,9 @@ public class Runner {
 
 	@AfterClass
 	public static void writeExtentReport() {
+				
 		Reporter.loadXMLConfig(new File("src/extentreporting/extent-config.xml"));
 		Reporter.setSystemInfo("user", System.getProperty("user.name"));
+		Reporter.setTestRunnerOutput("Sample report");
 	}
 }

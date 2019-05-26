@@ -2,10 +2,7 @@ package stepDef;
 
 import java.util.Properties;
 
-import org.openqa.selenium.By;
-
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import dataProvider.DataProvider;
 import driverInstance.SharedDriver;
@@ -44,6 +41,7 @@ public class Login extends SharedDriver{
 		System.out.println(" Click on Hello-Sign-in");	
 		AccountPageObjects obj = new AccountPageObjects(driver);
 		obj.join_now();
+		Utility.takeScreenShot(driver, "signuppage");
 		
 	}
 

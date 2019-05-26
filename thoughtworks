@@ -1,0 +1,146 @@
+Thoughtworks 
+
+coding round Quentions
+1: 1. Coding : I was asked to write a code to display the words of a sentence in alphabetical order.
+Ex: Input: Hi How Are You
+Output: Are Hi How You
+
+import java.util.*;
+ 
+public class AscendingWords {
+ 
+    public static void main(String args[]) {
+        // Accept input
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter String: ");
+        String input = scanner.nextLine();
+        // Add a space at end of input String
+        input = input + " ";
+        // Find number of words
+        int numberOfWords = 0;
+        for (int i = 0; i < input.length(); i++) {
+            char ch = input.charAt(i);
+            if (ch == ' ') {
+                numberOfWords++;
+            }
+        }
+        // Extract words and store in array
+        String[] words = new String[numberOfWords];
+        int startIndex = 0;
+        int currentWord = 0;
+        for (int i = 0; i < input.length(); i++) {
+            char ch = input.charAt(i);
+            if (ch == ' ') {
+                String word = input.substring(startIndex, i);
+                words[currentWord] = word;
+                currentWord++;
+                startIndex = i + 1;
+            }
+        }
+        // Sort words
+        for (int i = 0; i < words.length - 1; i++) {
+            for (int j = 0; j < words.length - i - 1; j++) {
+                if (words[j].compareTo(words[j + 1]) > 0) {
+                    String temp = words[j];
+                    words[j] = words[j + 1];
+                    words[j + 1] = temp;
+                }
+            }
+        }
+        // Print words
+        for (int i = 0; i < words.length; i++) {
+            System.out.print(words[i] + " ");
+        }
+    }
+}
+
+2. Technical Interview: General Testing Interview Questions, real life Scenarios to test.
+--Difference between Verification and Validation.
+Verification is the process of evaluating products of a development phase to find out whether they meet the specified requirements.	
+Validation is the process of evaluating software at the end of the development process to determine whether software meets the customer expectations and requirements.
+The objective of Verification is to make sure that the product being develop is as per the requirements and design specifications.	
+The objective of Validation is to make sure that the product actually meet up the user’s requirements, and check whether the specifications were correct in the first place.
+
+--Difference between severity, priority
+Priority is associated with scheduling, and “severity” is associated with standards.
+
+“Priority” means something is afforded or deserves prior attention; a precedence established by order of importance (or urgency).
+
+“Severity” is the state or quality of being severe; severe implies adherence to rigorous standards or high principles and often suggests harshness; 
+severe is marked by or requires strict adherence to rigorous standards or high principles, e.g. a severe code of behavior.
+
+--Difference between sanity and regression testing
+Smoke Testing: Software Testing done to ensure that whether the build can be accepted for through software testing or not. 
+Basically, it is done to check the stability of the build received for software testing
+
+Sanity testing: After receiving a build with minor changes in the code or functionality, a subset of regression test cases are executed that to 
+check whether it rectified the software bugs or issues and no other software bug is introduced by the changes.
+
+--Difference between Stress and Load testing
+Load Testing : This measures the response time when the application is subjected to more than usual load. 
+The application will be slower under heavy load, but the aim of load testing is to see whether the 
+application can sustain the increased load on the server or will it crash and kill the servers
+
+Stress Testing : Stress Testing is like load testing but we keep on increasing the load on the server till the time it crash down. 
+The aim of stress testing is to test the insane limits of an application
+
+--Automate a scenario using selenium ( write the script)
+-- How will you test a vending machine (All kinds of test cases, and also the types of testing you can apply)
+Test Scope : 
+1) Functional test pass 
+What type of coins does the vending machine accept? 
+Verify what type power input does vending machine handle?(Voltage) 
+Verify what is the capacity of the vending machine 
+Verify what type of food does it contains? 
+2) Stress Testing: 
+Verify that at what level vending machine stops accepting orders? 
+3) Load testing 
+verify what is the threshold of the machine 
+4) Usability testing 
+verify who will use this machine i.e what is the age group 
+5) Security testing : 
+Verify what type of security concerns you want to capture? 
+6) Performance testing : 
+How many transacactions does this machine handles in a day? 
+7) Acceptance testing 
+how would user get money back if there is a problem in machine
+
+-- Test a website ( the webservice/API)
+-- Puzzle 1: there are 2 containers 3L and 5L capacity. You can use as much water as you want.How will you get 4 L water using the 2 containers.
+First pour 5 liter of water in 3 liter container .... now you will have 2 liter remaning in 5 liter...now empty the 3 liter and fill it with 2 liter from the 5 lit container..... now take 5 liter and pour one more liter to 3 liter container ...now you are left with 4 liter in 5 liter container
+5   3
+5    0
+2    3
+2    0
+0    2
+5    2
+4    3
+
+--Puzzle 2: there are 8 identical balls, out of them one is overweight. In how many minimum passes( using a weight machine) can you find out the overweight ball?
+
+3. Technical Interview: Very very detailed questions about how you did automation in your previous project and what exactly you did everyday during your previous work. ( Can only be answered if you have actually done automation in the project, basically I think they want to check whether you have actually got hands on experience or have faked it in your resume.)
+--How to test an automatic door in a mall
+--Puzzle 1: there are 8 identical balls, out of them one is overweight or underweight ( you dont know which). In how many minimum passes( using a weight machine) can you find out the defective ball?  
+
+Interview
+
+First Round (Telephonic)
+Questions on Java .
+Scenarios for testing an e commerce site .
+Second Round(Some kind of test- non technical )
+Trust me it is difficult
+Third Round (F-F)
+Explain test automation framework . they look for Page object reference model .
+Write a program for String reverse and validate whether it is palindrome or not .
+Fourth Round
+How will you test whether the problem is with the third party s/w or your product .
+Count of occurrences of a pattern in a file
+Some shares and stocks game to be tested
+
+Verify that an array, when flipped 180 degrees, is still the same. e.g [1,6,0,9,1] = [1,9,0,6,1]
+
+Explain test automation framework . they look for Page object reference model .
+Write a program for String reverse and validate whether it is palindrome or not .
+Fourth Round
+How will you test whether the problem is with the third party s/w or your product .
+Count of occurrences pattern in file
