@@ -48,16 +48,12 @@ public class DataProvider {
 	 if(url != null) return url;
 	 else throw new RuntimeException("url not specified in the Configuration.properties file.");
 	 }
-	 
-	 public String getReportConfigPath(){
-		 String reportConfigPath = properties.getProperty("reportConfigPath");
-		 if(reportConfigPath!= null) return reportConfigPath;
-		 else throw new RuntimeException("Report Config Path not specified in the Configuration.properties file for the Key:reportConfigPath"); 
-		}
 
-	public String getProperty(String string) {
+	public String getProperty(String value) {
 		// TODO Auto-generated method stub
-		return null;
+		String getproperty =properties.getProperty(value);
+		if(getproperty!=null) return getproperty;
+		else throw new RuntimeException("Keyword not found");
 	}
 	 
 	 	 }
