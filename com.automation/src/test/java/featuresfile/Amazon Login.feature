@@ -11,6 +11,7 @@ Scenario: To test amazon login
   And I enter "password" 
   And I enter password
   Then I click on "login" button
+
   
 #    Examples:
 #   			| email |
