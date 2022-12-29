@@ -13,7 +13,8 @@ pool:
 steps:
 - task: Maven@3
   inputs:
-    mavenPomFile: '/../com.automation/pom.xml'
+    #mavenPomFile: 'pom.xml'
+     mavenPomFile: 'F:/GIThubWorkspace/BDDFramework/com.automation/pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
