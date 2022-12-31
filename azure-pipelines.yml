@@ -11,18 +11,14 @@ pool:
   name: 'MyAzureAgent'
 
 steps:
-- task: Maven@3
+- task: JavaToolInstaller@0
   inputs:
     mavenPomFile: 'C:/AzureAgent/vsts-agent-win-x64-2.213.2/_work/1\s/com.automation/pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
+    versionSpec: '1.8'
     jdkArchitectureOption: 'x64'
+    jdkSourceOption: Cache
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
- - task: JavaToolInstaller@0
-     inputs:
-        versionSpec: '8'
-        jdkArchitectureOption: 'x64'
-        jdkSourceOption: Cache
