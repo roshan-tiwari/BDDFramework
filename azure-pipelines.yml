@@ -16,7 +16,7 @@ steps:
     versionSpec: '8'
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'LocalDirectory'
-    jdkFile: 'C:/Program Files (x86)/Java/JDK.zip/JDK/bin'
+    jdkFile: 'C:\Program Files (x86)\Java\JDK.zip'
     jdkDestinationDirectory: '$(agent.tempDirectory)/bin'
     cleanDestinationDirectory: true
     mavenPomFile: 'C:/AzureAgent/vsts-agent-win-x64-2.213.2/_work/1/s/com.automation/pom.xml'
