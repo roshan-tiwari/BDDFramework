@@ -15,14 +15,16 @@ steps:
   inputs:
     versionSpec: '8'
     jdkArchitectureOption: 'x64'
-    jdkSourceOption: 'PreInstalled'
+    jdkSourceOption: 'LocalDirectory'
+    jdkFile: 'C:\Program Files (x86)\Java\JDK Bin.zip\JDK Bin\jdk1.8.0_181\bin'
+    jdkDestinationDirectory: 'C:\AzureAgent\vsts-agent-win-x64-2.213.2\_work\_temp'
+    cleanDestinationDirectory: true
 
-- task: JavaToolInstaller@0
+- task: Maven@3
   inputs:
     mavenPomFile: 'C:/AzureAgent/vsts-agent-win-x64-2.213.2/_work/1\s/com.automation/pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
-    cleanDestinationDirectory: true
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
